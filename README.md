@@ -1,87 +1,53 @@
 # Deep-Machine-Learning-for-Age-and-Gender-Prediction
-Deep learning belongs to Machine Learning Which Belongs to Artificial Intelligence. This project involves using Convolution Neural Network, in Matlab Deep Learning Toolbox, to built and train the CNN for predicting age and gender from an individual's image
-
+This involves building and training Convolution Neural Network for predicting age and gender from an individual's image. Matlab Deep Learning Toolbox is used in Matlab environment. 
 ## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
+Get this Repository to your local machine
+```sh
+git clone https://github.com/georgewanga/Deep-Machine-Learning-for-Age-and-Gender-Prediction.git
+```
 ### Prerequisites
+Into the cloned directory `Deep-Machine-Learning-for-Age-and-Gender-Prediction`, download and extract the Datasets.
+ - [IMDB](https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/static/imdb_crop.tar) - Download IMDB faces only Datadet used
+ - [WIKI](https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/static/wiki_crop.tar) - Download WIKI faces only Datadet used
+ - [APPA-REAL](http://158.109.8.102/AppaRealAge/appa-real-release.zip) - Download APPA-REAL Datadet used
 
-What things you need to install the software and how to install them
-
+Ensure you have MATLAB R2018a or later releases installed.
+Open the `AgeGenPredictCNN.mlx` script in matlab and ensure you adjust the working directory to current.
 ```
-Give examples
+path/to/your/folder/Deep-Machine-Learning-for-Age-and-Gender-Prediction
 ```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
 ## Running the tests
-
-Explain how to run the automated tests for this system
+Run the script as from the `Load The Pretrained Network` downwards.
+###### `WARNING!!` 
+Running from the file top will mean Training.
+##### Note 
+- The sctipt can be run in sections.
+- Use the `Predict Age and Gender` section to test
+- Training requires Strong GPU capabilities
+- Training on a CPU can cause the machine to freeze
+- Train the network only if Neccessary
 
 ### Break down into end to end tests
+#### Training
+Run the entire script to train the network
+Training will resume from checpoints created during the previous trainings.
+To Avoid resuming and do a completely fresh training, navigate to the `data` folder and rename or delete the folder `trainCheckpoints` before running the file
+#### Usage
+Go to the script section `Load The Pretrained Network`
+- run the two parts
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+Go to the script section `Predict Age and Gende`
+- Run the single section
+- You'll be prompted to choose a file
+- Select an image with a face from your local machine
+- The model will identify a face from your Image, add padding and crop it, then predict age and gender based on the detected face.
 
 ## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
+Please feel free to contribute to this code to make it better
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
+* **George Wanga** - *Initial work* 
+[Linkedin](https://www.linkedin.com/in/wangageorge/)
+[ORCID iD](https://orcid.org/0000-0002-4369-4626)
 ## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
+In preparation of this work, I had to seek for help and guidance of some respected persons, who deserve my deepest gratitude. I would like to show my gratitude MR. SEGERA RENE DAVIES, Lecturer, at University of Nairobi for giving me a proper guidelines throughout numerous consultations. I would prefer to expand my feeling to all that have directly and indirectly guided me in putting this together.
